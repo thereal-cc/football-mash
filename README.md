@@ -1,47 +1,34 @@
-# Astro Starter Kit: Minimal
+# Football Mash
 
-```
-npm create astro@latest -- --template minimal
-```
+This is a simple web app that allows users to vote for their favorite football team. The app presents two randomly selected teams and asks the user to choose which team they think would win in a match.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## How to Use
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+To use this app, simply visit [this link](https://football-mash.herokuapp.com/) and vote for the better team. The app will display the results of the vote after you have made your selection.
 
-## 🚀 Project Structure
+## Dependencies
 
-Inside of your Astro project, you'll see the following folders and files:
+This project uses the following dependencies:
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Node.js
+- React
+- Astro
+- Supabase
+- TailwindCSS
+- DaisyUI
+- Elo-Rating
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## API Endpoints
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+The app has the following API endpoints:
 
-Any static assets, like images, can be placed in the `public/` directory.
+- `/api/getTeams`: Returns two randomly selected teams from the database (GET).
+- `/api/adjustScores`: Adjusts the scores of the two teams based on the user's selection (POST).
 
-## 🧞 Commands
+## License
 
-All commands are run from the root of the project, from a terminal:
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+## Credits
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+If you have any questions or comments, please visit [this link](https://carson-cassidy.info/contact), and reach out. Thank you!
