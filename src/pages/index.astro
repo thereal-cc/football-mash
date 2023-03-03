@@ -1,15 +1,19 @@
 ---
+// Components/Layouts
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TeamForm from '../components/teamForm.jsx';
+
+// Astro Props
+const pageTitle = 'Home';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <div class="text-center space-y-2 mt-2">
+    <h1 class="text-4xl font-bold text-black">Is There A Best NFL Team? No.</h1>
+    <h2 class="text-2xl font-bold text-black">Will We Still Pick One Anyway? Yes.</h2>
+  </div>
+  <div class="text-center mt-36">
+    <h2 class="text-2xl font-bold text-black">Pick The Better Team Below</h2>
+  </div>
+  <TeamForm client:load/>
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import sortedTeams from '../lib/getSortedTeams.js';
+
+const teams = await sortedTeams();
+const pageTitle = 'Rankings';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="text-center space-y-2 mt-2">
+    <h1 class="text-4xl font-bold text-black">Rankings</h1>
+    <h2 class="text-2xl font-bold text-black">Best to Worst (Based on Score)</h2>
+  </div>
+
+  <div class="flex justify-center mt-4">
+    <div class="overflow-x-auto pb-12">
+      <table class="table w-72">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="text-lg">Team</th>
+            <th class="text-lg">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {teams.map((team, index) => (
+            <tr>
+              <th>{index + 1}</th>
+              <td>{team.name}</td>
+              <td>{team.score}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</BaseLayout>
