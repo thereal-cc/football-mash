@@ -1,8 +1,8 @@
 import database from '../../lib/supabase.js';
 
 export async function get({request}) {
-    const randomTeam1 = Math.floor(Math.random() * 32) + 1;
-    const randomTeam2 = Math.floor(Math.random() * 32) + 1;
+    let randomTeam1 = Math.floor(Math.random() * 32) + 1;
+    let randomTeam2 = Math.floor(Math.random() * 32) + 1;
 
     while (randomTeam1 === randomTeam2) {
         randomTeam2 = Math.floor(Math.random() * 32) + 1;
