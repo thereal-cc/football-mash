@@ -59,7 +59,7 @@ export default function TeamForm() {
   }
 
   return (
-    <div className="flex flex-col w-full lg:flex-row justify-center items-center mt-4">
+    <div className="flex flex-col w-full lg:flex-row justify-center items-center mt-4 pb-24">
       <button type="submit" name="Team1" onClick={(e) => handleSubmit(e, 'Team1')}>
         <TeamCard team={team1}/>
       </button>
