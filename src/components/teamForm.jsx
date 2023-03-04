@@ -51,7 +51,7 @@ export default function TeamForm() {
     const data = await response.json();
 
     if (data.message != "Success") {
-      return <div>Error: {data.message} </div>
+      return (<div>Error: {data.message} </div>);
     }
 
     setWinner('');
