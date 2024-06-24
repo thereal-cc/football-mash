@@ -4,7 +4,7 @@ This is a simple web app that allows users to vote for their favorite football t
 
 ## How to Use
 
-To use this app, simply visit [this link](https://football-mash.herokuapp.com/) and vote for the better team. The app will display the results of the vote after you have made your selection.
+To use this app, simply visit [this link](https://footballmash.netlify.app) and vote for the better team. The app will display the results of the vote after you have made your selection.
 
 ## Dependencies
 
