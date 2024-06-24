@@ -31,4 +31,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## Credits
 
-If you have any questions or comments, please visit [this link](https://carson-cassidy.info/contact), and reach out. Thank you!
+If you have any questions or comments, please visit [this link](https://carson-cassidy.netlify.app/contact), and reach out. Thank you!
