@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import React from 'react';
 import TeamCard from './teamCard';
 
 export default function TeamForm() {
@@ -11,19 +12,23 @@ export default function TeamForm() {
 
   // Get team data from API
   const getTeams = async () => {
-    const response = await fetch('/api/getTeams', {
-      method: 'GET',
-    });
+    try {
+      const response = await fetch('/api/getTeams');
+      const data = await response.json();
 
-    const data = await response.json();
+      if (!response.ok) {
+        console.error("Fetch error:", data.message);
+        return;
+      }
 
-    if (response.status != 200) {
-      return <div>Error: {response.message} </div>
+      console.log(response);
+
+      setTeam1(data.message[0]);
+      setTeam2(data.message[1]);
+    } catch (err) {
+      console.error("Network or parsing error:", err);
     }
-
-    setTeam1(data.message[0]);
-    setTeam2(data.message[1]);
-  }
+};
   
   // Get team data on page load
   useEffect(() => {

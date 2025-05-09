@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function TeamCard({team}) {
   return (
     <div className="card card-compact w-96 shadow">

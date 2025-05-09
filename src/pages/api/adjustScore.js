@@ -1,11 +1,13 @@
 import database from '../../lib/supabase.js';
 import eloRating from 'elo-rating';
 
-export async function post({request}) {
+export async function POST({request}) {
     try {
         // Get Teams and Calculate Scores
         const {team1, team2, winner} = await request.json();
         const result = eloRating.calculate(team1.score, team2.score, winner);
+
+        console.log(result);
 
         // Add Scores to Database
         await database.from('Teams').update({score: result.playerRating}).eq('id', team1.id);
